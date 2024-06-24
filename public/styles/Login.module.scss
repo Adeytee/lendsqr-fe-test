@@ -1,0 +1,173 @@
+// styles/Login.module.scss
+
+.loginContainer {
+  display: flex;
+  height: 100vh;
+
+  @media (max-width: 1030px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.leftPanel, .rightPanel {
+  flex: 1;
+  display: flex;
+  padding: 20px;
+
+  @media (max-width: 1030px) {
+    flex: none;
+    height: 90vh;
+  }
+
+  @media (max-width: 768px) {
+    flex: none;
+    height: 50vh;
+    padding: 10px;
+    align-items: center;
+  }
+}
+
+//left tab
+.union{
+  height: 53px;
+  width: 50px;
+  margin-right: 2rem;
+  margin-top: 15%;
+  margin-left: 15%;
+
+  @media (max-width: 768px) {
+    margin-top: 5%;
+    margin-left: 0;
+    align-self: flex-start;
+  }
+}
+
+.lend{
+  margin-top: 15%;
+
+  @media (max-width: 768px) {
+    margin-top: 5%;
+    align-self: flex-start;
+  }
+}
+
+.pablo{
+  margin-top: 40%;
+  align-items: start;
+  justify-content: center;
+  margin-left: -31%;
+  padding-left: 0%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.leftPanel {
+  justify-content: start;
+ 
+}
+
+//right tab
+.rightPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  text-align: left;
+  margin-top: -20%;
+
+  @media (max-width: 1030px) {
+    align-items: center;
+  }
+
+    h1{
+      font-size: 50px;
+      margin-bottom: 4rem;
+      color: #213F7D;
+
+      @media (max-width: 1030px) {
+        margin-bottom: 2.5rem;
+      }
+    }
+    p{
+      margin-bottom: 3rem;
+      font-size: 20px;
+      color:#545F7D;
+    }
+    a{
+      color: #39CDCC;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+}
+
+//login form
+.loginForm {
+  max-width: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+
+  input {
+    padding: 10px;
+    height: 55px;
+    margin-top: 5px;
+    margin-bottom: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Avenir Next;
+    font-size: 18px;
+    color: #545F7D;
+    border-color: #39CDCC;
+  }
+
+  .passwordContainer {
+    position: relative;
+
+    input {
+      width: 100%;
+      padding-right: 50px; 
+    }
+
+    .togglePassword {
+      position: absolute;
+      right: 10px;
+      top: 35%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #39CDCC;
+    }
+  }
+
+  button {
+    font-size: 18px;
+    height: 50px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #39CDCC;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #1fc0c0;
+    }
+
+  }
+
+  .error {
+    color: red;
+    margin-bottom: 10px;
+    margin-top: -15px;
+    font-size: 14px;
+  }
+}
