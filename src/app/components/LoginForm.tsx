@@ -5,12 +5,12 @@ import React, { useState } from "react";
 
 // ** Next Import
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 // ** Styles Import
 import styles from "/public/styles/Login.module.scss";
 
 // ** Third party Import
-import Image from "next/image";
 import lend from "/public/images/lend.jpeg";
 import union from "/public/images/union.jpeg";
 import pablo from "/public/images/pablo.jpeg";
@@ -25,7 +25,7 @@ const LoginForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // ** Authentication logic 
+    // ** Authentication logic
     localStorage.setItem("user", JSON.stringify({ email }));
     router.push("/dashboard");
   };
@@ -46,7 +46,6 @@ const LoginForm = () => {
   return (
     <div className={styles.loginContainer}>
       <div className={styles.leftPanel}>
-        
         {/* Left Panel Content */}
         <Image src={union} alt="Login Logo" className={styles.union} />
         <Image src={lend} alt="Login Illustration" className={styles.lend} />
