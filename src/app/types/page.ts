@@ -3,4 +3,8 @@ export interface User {
     name: string;
     email: string;
     phone: string;
+    isActive: boolean;
+    registered: any;
+    withLoan: boolean;
+    withSavings: boolean;
   }

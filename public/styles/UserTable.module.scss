@@ -1,0 +1,250 @@
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.headerItem {
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .headerContent {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    svg {
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  }
+}
+  // Filter Dropdown Styles
+  .filterContainer {
+position: relative;
+  }
+  .filterDropdown {
+    display: inline-block;
+    // flex-direction: row;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    min-width: 200px; 
+
+    &.active {
+        display: inline-block; 
+      }
+  }
+
+  .filterItem {
+    margin-bottom: 10px;
+
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  }
+
+  .filterButtons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .resetButton,
+  .filterButton {
+    background-color: #39cdcc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #26a19e;
+    }
+  }
+
+//   Table Body
+.tableBody {
+  width: 100%;
+   
+  @media (max-width: 768px) {
+   flex-direction: column;
+}
+}
+
+.tableRow {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 20px;
+}
+
+.tableCell {
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .tableRow {
+    flex-direction: column;
+  }
+
+  .tableCell {
+    padding: 5px 0;
+  }
+}
+
+// Status Styles
+
+.statusText {
+  display: inline-block;
+  padding: 2px 15px;
+  border-radius: 100px;
+  color: white;
+  font-weight: bold;
+}
+
+.activeStatus {
+  color: #28a745;
+  background-color: #d4edda;
+}
+
+.inactiveStatus {
+  color: #545f7d;
+  background-color: #dde1ea;
+}
+
+.blacklistedStatus {
+  color: #dc3545;
+  background-color: #f8d7da;
+}
+
+.pendingStatus {
+  color: #ffc107;
+  background-color: #fff3cd;
+}
+
+// Pagination Styles
+
+.paginationContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.pagination {
+  display: flex;
+  justify-content: right;
+  padding: 10px;
+}
+
+.pagination button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #39cdcc;
+  color: white;
+  font-weight: bold;
+}
+
+.pagination button:disabled {
+  background-color: #f4f4f4;
+  cursor: not-allowed;
+}
+
+.showingState {
+  display: flex;
+  justify-content: left;
+  padding: 10px;
+
+  @media (max-width: 768px) {
+    .showingState {
+      justify-content: flex-end; /* Adjust alignment */
+      margin-top: 10px;
+    }
+  }
+}
+
+.showingState select {
+  margin: 0 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+// Action Dropdown Options Style
+
+.actionDropdownContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.actionDropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+  min-width: 160px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.actionDropdownContainer:hover .actionDropdownContent {
+  display: block;
+}
+
+.actionDropdownItem {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+.actionDropdownItem:hover {
+  background-color: #ddd;
+}
+
+.actionDropdownItemIcon {
+  font-size: 18px;
+}

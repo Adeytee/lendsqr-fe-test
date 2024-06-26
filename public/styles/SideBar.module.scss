@@ -5,6 +5,7 @@
     padding-left: 3rem;
     height: auto;
     border-right: 1px solid #ccc;
+    overflow-y: auto; // Enable vertical scrolling
 
     transition: transform 0.3s ease-in-out;
 
