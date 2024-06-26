@@ -1,0 +1,71 @@
+.userDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .mainContent {
+    display: flex;
+    flex: 1; // Take up the remaining space after the Navbar
+    overflow-y: hidden; // Prevent overflow if content is too large
+
+  }
+
+  .contentWrapper {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; // Prevent overflow if content is too large
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+  }
+
+
+.buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .blacklistButton {
+    border: 3px solid #dc3545;
+    font-size: 20px;
+    color:#dc3545;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .activateButton {
+    border: 3px solid #28a745;
+    font-size: 20px;
+    color:#28a745 ;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .backButton {
+    display: flex;
+    gap:0.5rem;
+    color: #545F7D;
+    cursor: pointer;
+    font-size: 16px;
+    align-items: center;
+  }
+  
+  .sideBar {
+    width: 300px; 
+    height: 100%;
+    overflow-y: auto; // Allow scrolling for the sidebar if content is too large
+  }
+  
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }

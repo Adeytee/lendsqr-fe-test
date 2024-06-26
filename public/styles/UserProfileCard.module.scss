@@ -1,0 +1,120 @@
+.userProfileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.profileCard {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.profileHead {
+  height: 300px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.profilePicture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.grouped {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4rem;
+}
+
+.userName {
+  font-size: 28px;
+  margin: 0;
+  color: #213f7d;
+}
+
+.userId {
+  font-size: 14px;
+  color: #777;
+  align-self: right;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.tabs button.activeTab {
+  border-bottom: #39cdcc solid 8px;
+}
+
+.detailsCard {
+  width: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 25px;
+  height: 100%;
+}
+
+// Rating Styles
+
+.rating {
+  display: inline-block;
+  font-size: 24px; 
+}
+
+.star {
+  color: gold; /* Filled star color */
+}
+
+.personalInformationContainer {
+  margin-top: 2rem;
+}
+
+.sectionHeads {
+  color: #213f7d;
+  margin-bottom: 2rem;
+}
+
+.groupContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 10rem; 
+  margin-bottom: 3rem;
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+}
+
+.informationData {
+  font-size: 12px;
+  color: #777;
+  align-self: start;
+}
+.informationProp {
+  font-size: 22px;
+  color: #213f7d;
+  align-self: start;
+}

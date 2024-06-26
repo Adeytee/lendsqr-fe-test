@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import React, { useEffect, useState } from 'react';
-import { fetchUsers } from './utils/api';
-import { User } from './types/page';
+import React, { useEffect, useState } from "react";
+import { fetchUsers } from "./utils/api";
+import { User } from "./types/page";
 
 const ApiTest = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -16,7 +16,7 @@ const ApiTest = () => {
         setUsers(fetchedUsers);
         setLoading(false);
       } catch (err) {
-        setError('Failed to fetch users');
+        setError("Failed to fetch users");
         setLoading(false);
       }
     };
@@ -31,7 +31,7 @@ const ApiTest = () => {
     <div>
       <h1>Users</h1>
       <ul>
-        {users?.map(user => (
+        {users?.map((user) => (
           <li key={user.id}>
             {user.name} - {user.email}
           </li>

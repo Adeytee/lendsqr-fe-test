@@ -14,13 +14,12 @@
   padding: 20px;
   margin-top: 5rem;
   margin-right: 5rem;
-  // padding-left: 4rem;
   text-align: left;
 
   @media (max-width: 768px) {
     width: 100%;
     margin-right: 0;
-    margin-bottom: 2rem; /* Adjust spacing between cards */
+    margin-bottom: 2rem; 
   }
 }
 
@@ -55,7 +54,7 @@
 
   @media (max-width: 768px) {
     .info {
-      text-align: center; /* Center align text on small screens */
+      text-align: center; 
     }
   }
 }
