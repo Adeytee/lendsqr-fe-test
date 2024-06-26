@@ -13,7 +13,7 @@
   padding: 10px 20px;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 5;
 }
 
 .headerItem {
@@ -38,37 +38,31 @@
   }
 }
   // Filter Dropdown Styles
+
   .filterContainer {
-position: relative;
-  }
-  .filterDropdown {
-    display: inline-block;
-    // flex-direction: row;
-    padding: 10px;
-    background-color: #fff;
+    position: absolute;
+    flex-direction: column;
+    top: 10px; /* Adjust based on your design */
+    left: 0;
+    height: auto;
+    // width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
     border: 1px solid #ccc;
-    min-width: 200px; 
-
-    &.active {
-        display: inline-block; 
-      }
+    z-index: 200;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-
+  
+  .filterDropdown {
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    // position: absolute;
+  }
+  
   .filterItem {
-    margin-bottom: 10px;
-
-
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    input {
-      width: 100%;
-      padding: 5px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
+    flex: 1 1 45%;
+    margin: 10px;
   }
 
   .filterButtons {
