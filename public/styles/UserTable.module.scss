@@ -1,8 +1,8 @@
 .tableContainer {
   width: 100%;
-  overflow-x: auto;
+  overflow-x: visible;
   margin-top: 4rem;
-  position: relative;
+  min-height: 60vh;
 }
 
 .tableHeader {
@@ -11,16 +11,13 @@
   background-color: #f9f9f9;
   border-bottom: 1px solid #ccc;
   padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 5;
+  position: relative;
 }
 
 .headerItem {
   flex: 1;
   padding: 10px;
   text-align: left;
-  position: relative;
 
   &:not(:last-child) {
     margin-right: 10px;
@@ -37,62 +34,69 @@
     }
   }
 }
-  // Filter Dropdown Styles
+// Filter Dropdown Styles
 
-  .filterContainer {
-    position: absolute;
-    flex-direction: column;
-    top: 10px; /* Adjust based on your design */
-    left: 0;
-    height: auto;
-    // width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    border: 1px solid #ccc;
-    z-index: 200;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .filterDropdown {
-    display: flex;
-    flex-direction: column;
-    // flex-wrap: wrap;
-    // position: absolute;
-  }
-  
-  .filterItem {
-    flex: 1 1 45%;
-    margin: 10px;
-  }
+.filterContainer {
+  position: absolute;
+  top: 2.75rem; /* Adjust based on your design */
+  left: 0;
+  background-color: rgba(255, 255, 255);
+  border: 1px solid #ccc;
+  z-index: 200;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
 
-  .filterButtons {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+.filterDropdown {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.filterItem {
+  display: grid;
+  gap: 0.15rem;
+
+  & .filterItemLabel {
+    text-transform: capitalize;
+    font-size: 0.85rem;
   }
 
-  .resetButton,
-  .filterButton {
-    background-color: #39cdcc;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: #26a19e;
-    }
+  & .filterItemInput {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
   }
+}
+
+.filterButtons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.resetButton,
+.filterButton {
+  background-color: #39cdcc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #26a19e;
+  }
+}
 
 //   Table Body
 .tableBody {
   width: 100%;
-   
+
   @media (max-width: 768px) {
-   flex-direction: column;
-}
+    flex-direction: column;
+  }
 }
 
 .tableRow {

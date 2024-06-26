@@ -45,17 +45,17 @@ const TableHeader = () => {
   };
 
   const headers = [
-    { key: "organization", label: "ORGANIZATION" },
-    { key: "username", label: "USERNAME" },
-    { key: "email", label: "EMAIL" },
-    { key: "phone", label: "PHONE NUMBER" },
-    { key: "dateJoined", label: "DATE JOINED" },
-    { key: "status", label: "STATUS" },
+    { key: "organization", label: "Organization" },
+    { key: "username", label: "Username" },
+    { key: "email", label: "Email" },
+    { key: "phone", label: "Phone Number" },
+    { key: "dateJoined", label: "Date Joined" },
+    { key: "status", label: "Status" },
     { key: "action", label: "Action" },
   ];
 
   return (
-    <div className={styles.tableContainer}>
+    <div>
       <div className={styles.tableHeader}>
         {headers.map(({ key, label }) => (
           <div key={key} className={styles.headerItem}>
@@ -65,29 +65,31 @@ const TableHeader = () => {
             </div>
           </div>
         ))}
-      </div>
-      {dropdownVisible && (
-        <div className={styles.filterContainer}>
-          <div className={styles.filterDropdown}>
-            {headers.map(({ key, label }) => (
-              <div key={key} className={styles.filterItem}>
-                <label>{label}</label>
-                <input
-                  type="text"
-                  //@ts-ignore
-                  value={filters[key]}
-                  onChange={(e) => onFilterChange(key, e.target.value)}
-                  placeholder={`Filter by ${label.toLowerCase()}`}
-                />
+
+        {dropdownVisible && (
+          <div className={styles.filterContainer}>
+            <div className={styles.filterDropdown}>
+              {headers.map(({ key, label }) => (
+                <div key={key} className={styles.filterItem}>
+                  <label className={styles.filterItemLabel}>{label}</label>
+                  <input
+                    type="text"
+                    className={styles.filterItemInput}
+                    //@ts-ignore
+                    value={filters[key]}
+                    onChange={(e) => onFilterChange(key, e.target.value)}
+                    placeholder={`Filter by ${label.toLowerCase()}`}
+                  />
+                </div>
+              ))}
+              <div className={styles.filterButtons}>
+                <button className={styles.resetButton}>Reset</button>
+                <button className={styles.filterButton}>Filter</button>
               </div>
-            ))}
-            <div className={styles.filterButtons}>
-              <button className={styles.resetButton}>Reset</button>
-              <button className={styles.filterButton}>Filter</button>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
