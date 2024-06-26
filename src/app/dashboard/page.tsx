@@ -20,7 +20,6 @@ import { FaUserFriends, FaUsers, FaCoins, FaFileAlt } from "react-icons/fa";
 
 const Dashboard = () => {
   const [users, setUsers] = useState<User[]>([]);
-  console.log({ users });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const activeUsers = users.filter((user) => user.isActive).length;
