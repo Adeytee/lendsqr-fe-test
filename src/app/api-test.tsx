@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { fetchUsers } from "./utils/api";
-import { User } from "./types/page";
+import { User } from "./types";
 
 const ApiTest = () => {
   const [users, setUsers] = useState<User[]>([]);

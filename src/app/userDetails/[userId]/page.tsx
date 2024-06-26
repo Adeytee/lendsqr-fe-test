@@ -8,7 +8,7 @@ import { useParams, useRouter } from "next/navigation";
 
 // ** Third Party Imports
 import { fetchUserDetails } from "../../utils/api";
-import { User } from "../../types/page";
+import { User } from "../../types";
 import Navbar from "@/app/components/Navbar";
 import SideBar from "@/app/components/SideBar";
 import UserProfileCard from "@/app/components/UserProfileCards";

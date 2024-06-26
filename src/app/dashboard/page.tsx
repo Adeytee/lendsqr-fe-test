@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 
 //  ** Third Party Imports
 import { fetchUsers } from "../utils/api";
-import { User } from "../types/page";
+import { User } from "../types";
 import "../globals.css";
 import Navbar from "../components/Navbar";
 import SideBar from "../components/SideBar";

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { User } from "../types/page";
+import { User } from "../types";
 
 const API_URL = "https://run.mocky.io/v3/f0f9e578-5337-4c84-9e85-13a84e0c3169";
 

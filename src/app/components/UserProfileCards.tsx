@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import styles from "/public/styles/UserProfileCard.module.scss";
 
 //  ** Third Party Imports
-import { User } from "../types/page";
+import { User } from "../types";
 
 interface UserProfileCardProps {
   user: User;
