@@ -1,0 +1,36 @@
+.dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .mainContent {
+    display: flex;
+    flex: 1; // Take up the remaining space after the Navbar
+    overflow: hidden; // Prevent overflow if content is too large
+  }
+  
+  .sideBar {
+    width: 300px; 
+    height: 100%;
+    overflow-y: auto; // Allow scrolling for the sidebar if content is too large
+  }
+  
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto; // Allow scrolling for the main content area if content is too large
+  }
+
+  .cardsLayout{
+    padding-left: 1%;
+    display: flex;
+    
+
+    h1{
+        color: #213F7D;
+        margin-bottom: 4rem;
+    }
+}
