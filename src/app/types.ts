@@ -27,5 +27,5 @@ export interface User {
     salary: string
     tags: Array<string>
     friends: Array<string>
-
   }
+  
