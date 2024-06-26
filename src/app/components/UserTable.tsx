@@ -21,6 +21,7 @@ import styles from "/public/styles/UserTable.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 
+// Table head section
 const TableHeader = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [filters, setFilters] = useState({
@@ -90,6 +91,8 @@ const TableHeader = () => {
     </div>
   );
 };
+
+// Table Body Section
 const TableBody = ({ data }: any) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
@@ -143,11 +146,12 @@ const TableBody = ({ data }: any) => {
   );
 
   const viewDetails = (item: any) => {
-    router.push(`/userDetails/${item.id}`);
+    router.push(`/userDetails/${item.id}/`);
+    console.log('id:', item.id)
   };
 
   return (
-    // Table Body Section
+    // Table Cells Section
     <div className={styles.tableBody}>
       {paginatedData.map((item: any, index: any) => (
         <div key={index} className={styles.tableRow}>
@@ -232,6 +236,7 @@ const TableBody = ({ data }: any) => {
   );
 };
 
+// Export Table
 const UserTable = ({ data }: any) => {
   return (
     <div className={styles.tableContainer}>

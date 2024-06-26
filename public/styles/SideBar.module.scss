@@ -1,8 +1,7 @@
 .layout {
     width: 400px;
     background-color: #ffffff;
-    padding-top: 3rem;
-    padding-left: 3rem;
+   
     height: auto;
     border-right: 1px solid #ccc;
     overflow-y: auto; // Enable vertical scrolling
@@ -21,6 +20,7 @@
 
       a, p{
         font-size: 12px;
+
       }
     }
   
@@ -37,7 +37,7 @@
   gap: 10px;
   font-size: 24px;
   color: #213F7D;
-  padding-bottom: 2rem;
+  padding: 2rem 3rem;
 
   @media (max-width: 886px) {
     font-size: 18px;
@@ -62,20 +62,23 @@
 
 .sectionHead{
   font-size: 20px;
-  padding-top:1rem;
-  padding-bottom:2rem;
+  padding: 1rem 2rem;
+
+
+  @media (max-width) {
+    padding: 1rem 2rem;
+  
+    }
 }
 .customList{
   display: flex;
   width: auto;
+  padding: 1rem 3rem;
   align-items: center;
   justify-content: left;
   gap: 10px;
   font-size: 20px;
   color: #213F7D;
-  padding-bottom: 2rem;
-
- 
 
   @media (max-width: 886px) {
     font-size: 16px;

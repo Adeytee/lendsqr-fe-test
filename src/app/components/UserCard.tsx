@@ -1,5 +1,4 @@
 import React from "react";
-import { FaUser } from 'react-icons/fa';
 
 // ** Styles Import
 import styles from "/public/styles/UserCard.module.scss";

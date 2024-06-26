@@ -1,4 +1,4 @@
-import { User } from '../types/page';
+import { User } from "../types/page";
 
 export const getUserFromStorage = (id: number): User | null => {
   const user = localStorage.getItem(`user_${id}`);

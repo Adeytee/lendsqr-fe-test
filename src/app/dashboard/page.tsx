@@ -1,6 +1,9 @@
 "use client";
 
+// ** React Imports
 import React, { useEffect, useState } from "react";
+
+//  ** Third Party Imports
 import { fetchUsers } from "../utils/api";
 import { User } from "../types/page";
 import "../globals.css";
@@ -12,6 +15,7 @@ import UserTable from "../components/UserTable";
 // ** Styles Import
 import styles from "/public/styles/DashBoard.module.scss";
 
+// ** Icon Imports
 import { FaUserFriends, FaUsers, FaCoins, FaFileAlt } from "react-icons/fa";
 
 const Dashboard = () => {
@@ -24,6 +28,7 @@ const Dashboard = () => {
   const usersWithLoan = users.filter((user) => user.withLoan).length;
   const usersWithSavings = users.filter((user) => user.withSavings).length;
 
+  // useEffect to listen to HTTP Request
   useEffect(() => {
     const getUsers = async () => {
       try {
@@ -42,6 +47,7 @@ const Dashboard = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
 
+  // Render Third Party Components
   return (
     <div className={styles.dashboardContainer}>
       <Navbar />
@@ -54,7 +60,7 @@ const Dashboard = () => {
               users="USERS"
               Icon={FaUserFriends}
               userCount={usersCount}
-              color = "#DF18FF"
+              color="#DF18FF"
             />
             <UserCard
               users="ACTIVE USERS"
@@ -76,7 +82,7 @@ const Dashboard = () => {
             />
           </div>
           <div>
-            <UserTable data={users}/>
+            <UserTable data={users} />
           </div>
         </div>
       </div>
