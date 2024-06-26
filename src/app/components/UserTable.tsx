@@ -149,7 +149,6 @@ const TableBody = ({ data }: any) => {
 
   const viewDetails = (item: any) => {
     router.push(`/userDetails/${item.id}/`);
-    console.log('id:', item.id)
   };
 
   return (
