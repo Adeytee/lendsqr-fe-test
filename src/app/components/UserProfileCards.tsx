@@ -105,7 +105,7 @@ const PersonalInformation = ({ userData }: any) => {
           {" "}
           <p className={styles.informationData}>SECTOR OF EMPLOYMENT</p>
           <p className={styles.informationProp}>
-            {userData?.sectorOfEmployment}
+            {userData?.sectorOfEmploymment}
           </p>
         </div>
         <div className={styles.groups}>
