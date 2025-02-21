@@ -1,7 +1,7 @@
 import axios from "axios";
 import { User } from "../types";
 
-const API_URL = "https://run.mocky.io/v3/c2312ba3-352d-45ec-88da-00c773e673e0";
+const API_URL = "https://run.mocky.io/v3/2ecdfdd9-58cb-4e55-9bd6-da7b396efe21";
 
 export const fetchUsers = async (): Promise<User[]> => {
   try {
